@@ -1,0 +1,92 @@
+body{
+    background-color: #ECEF41;
+   
+}
+.navbar-custom{
+    background-color: #1A1717 !important;
+    
+    height: 108px;
+}
+
+.searchbtn-custom{
+    font-size: 15px;
+    color: white;
+    background-color: #574BD8;
+    border-radius: 0.9rem;
+}
+
+
+
+
+
+
+.mos-bug{
+    font-weight: bolder;
+    color: rgb(247, 245, 243) !important;
+    font-size: 3.5rem;
+}
+
+.mos-bug2{
+    font-weight: bolder;
+    color: rgb(247, 245, 243) !important;
+    font-size: 2rem;
+    padding-right: 2rem;
+}
+
+.links-custom{
+    color: white !important;
+    font-weight: bold;
+}
+
+.container-margin{
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+.cart-container{
+border:solid 0.1rem ;
+width: 25rem;
+height: 34rem;
+background-color:white ;
+
+}
+
+.cart-container2{
+    border: solid 0.09rem;
+    
+    height: 4rem;
+    border-color: black;
+    color: white;
+    margin-right: 0.9rem;
+}
+.cart-txt-namefield{
+    height: 1.5rem;
+    font-size: 0.9rem;
+    width: 14rem;
+       
+}
+
+.cart-txtamount{
+    height: 1.5rem;
+    font-size: 0.9rem;
+    width: 5rem;
+    margin-left: 3rem;
+}
+
+.cart-container-padding{
+    margin-top: -1rem;
+}
+
+.cart{
+    display: flex;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 10px;
+    border-radius: 3px;
+    width: 80px;
+}
+
+
+
+

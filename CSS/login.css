@@ -1,0 +1,35 @@
+
+.navbar-custom {
+    background-color: #111011;
+}
+
+.navbar-brand{
+    font-size: medium;
+   
+    color: rgb(240, 234, 234);
+   font-weight: bolder;
+}
+.navbar-brand-1{
+    align-content: center;
+}
+
+.details{
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 370px;
+    width: 390px;
+    margin: 60px;
+    
+}
+.user{
+    background-image:url('username.png');
+}
+.password{
+    background-image: url('keys.png');
+}
+
+.btn-custom{
+    border-radius: 10px;
+    color: black;
+    font-weight: bolder;
+}
+

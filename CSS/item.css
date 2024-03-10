@@ -1,0 +1,28 @@
+body{
+  background-color: #ECEF41;
+}
+   
+
+.navbar-custom{
+    background-color: #1A1717 !important;
+    
+    height: 108px;
+}
+
+.mos-bug{
+    font-weight: bolder;
+    color: rgb(247, 245, 243) !important;
+    font-size: 3.5rem;
+}
+
+.mos-bug2{
+    font-weight: bolder;
+    color: rgb(247, 245, 243) !important;
+    font-size: 2rem;
+    padding-right: 2rem;
+}
+.links-custom{
+    color: white !important;
+    font-weight: bold;
+}
+
