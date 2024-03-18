@@ -5,7 +5,7 @@ const storeList = [
         amount:  750.00,
         dis:0,
         "itemCat":"Burger",   
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -14,7 +14,7 @@ const storeList = [
         amount:1500.00 ,
         dis: 15,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     }, 
     {
@@ -23,7 +23,7 @@ const storeList = [
         amount: 1600.00 ,
         dis: 0,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -32,7 +32,7 @@ const storeList = [
         amount: 1400.00 ,
         dis: 0,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -41,7 +41,7 @@ const storeList = [
         amount: 800.00,
         dis:20 ,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -50,7 +50,7 @@ const storeList = [
         amount: 1000.00,
         dis: 0,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -59,7 +59,7 @@ const storeList = [
         amount: 600.00 ,
         dis: 0,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -68,7 +68,7 @@ const storeList = [
         amount:650.00  ,
         dis:15 ,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -77,7 +77,7 @@ const storeList = [
         amount: 800.00 ,
         dis: 0,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -86,7 +86,7 @@ const storeList = [
         amount: 1800.00 ,
         dis: 0,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -95,7 +95,7 @@ const storeList = [
         amount:1250.00 ,
         dis:20 ,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -104,7 +104,7 @@ const storeList = [
         amount: 1200.00,
         dis: 0,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -113,7 +113,7 @@ const storeList = [
         amount: 1600.00 ,
         dis: 10,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -122,7 +122,7 @@ const storeList = [
         amount: 900.00,
         dis: 0,
         "itemCat":"Burger",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -131,7 +131,7 @@ const storeList = [
         amount: 2000.00,
         dis: 0,
         "itemCat":"Submarine",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -140,7 +140,7 @@ const storeList = [
         amount: 1500.00 ,
         dis: 0,
         "itemCat":"Submarine",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -149,7 +149,7 @@ const storeList = [
         amount: 1800.00 ,
         dis: 3,
         "itemCat":"Submarine",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -158,7 +158,7 @@ const storeList = [
         amount: 1400.00,
         dis: 0,
         "itemCat":"Submarine",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -167,7 +167,7 @@ const storeList = [
         amount: 2300.00 ,
         dis: 0,
         "itemCat":"Submarine",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -176,7 +176,7 @@ const storeList = [
         amount: 2200.00 ,
         dis: 0,
         "itemCat":"Submarine",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -185,7 +185,7 @@ const storeList = [
         amount: 1900.00 ,
         dis: 16,
         "itemCat":"Submarine",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -194,7 +194,7 @@ const storeList = [
         amount: 2800.00,
         dis: 0,
         "itemCat":"Submarine",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -203,7 +203,7 @@ const storeList = [
         amount: 3000.00,
         dis: 0,
         "itemCat":"Submarine",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -212,7 +212,7 @@ const storeList = [
         amount: 1200.00,
         dis: 0,
         "itemCat":"Fries",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -221,7 +221,7 @@ const storeList = [
         amount: 600.00,
         dis: 0,
         "itemCat":"Fries",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -230,7 +230,7 @@ const storeList = [
         amount: 800.00,
         dis: 0,
         "itemCat":"Fries",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -239,7 +239,7 @@ const storeList = [
         amount: 650.00 ,
         dis: 0,
         "itemCat":"Fries",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -248,7 +248,7 @@ const storeList = [
         amount: 450.00 ,
         dis: 0,
         "itemCat":"Fries",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -257,7 +257,7 @@ const storeList = [
         amount: 600.00,
         dis: 0,
         "itemCat":"Pasta",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -266,7 +266,7 @@ const storeList = [
         amount: 1600.00,
         dis: 15,
         "itemCat":"Pasta",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -275,7 +275,7 @@ const storeList = [
         amount: 1700.00 ,
         dis: 0,
         "itemCat":"Pasta",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -284,7 +284,7 @@ const storeList = [
         amount: 2900.00 ,
         dis: 10,
         "itemCat":"Pasta",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -293,7 +293,7 @@ const storeList = [
         amount: 2000.00 ,
         dis: 0,
         "itemCat":"Pasta",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -302,7 +302,7 @@ const storeList = [
         amount: 1950.00 ,
         dis: 0,
         "itemCat":"Pasta",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -311,7 +311,7 @@ const storeList = [
         amount: 2400.00,
         dis: 1,
         "itemCat":"Pasta",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -320,7 +320,7 @@ const storeList = [
         amount: 2000.00 ,
         dis: 1,
         "itemCat":"Pasta",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -329,7 +329,7 @@ const storeList = [
         amount: 1200.00,
         dis: 0,
         "itemCat":"Chicken",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -338,7 +338,7 @@ const storeList = [
         amount: 2300.00 ,
         dis: 10,
         "itemCat":"Chicken",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -347,7 +347,7 @@ const storeList = [
         amount: 3100.00,
         dis: 5,
         "itemCat":"Chicken",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -356,7 +356,7 @@ const storeList = [
         amount: 2400.00 ,
         dis: 0,
         "itemCat":"Chicken",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -365,7 +365,7 @@ const storeList = [
         amount: 900.00,
         dis: 0,
         "itemCat":"Chicken",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -374,7 +374,7 @@ const storeList = [
         amount: 2100.00,
         dis: 0,
         "itemCat":"Chicken",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -383,7 +383,7 @@ const storeList = [
         amount: 990.00 ,
         dis: 5,
         "itemCat":"Beverages",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -392,7 +392,7 @@ const storeList = [
         amount: 1230.00,
         dis: 0,
         "itemCat":"Beverages",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -401,7 +401,7 @@ const storeList = [
         amount: 1500.00 ,
         dis: 3,
         "itemCat":"Beverages",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
     {
@@ -410,7 +410,7 @@ const storeList = [
         amount: 850.00,
         dis: 7,
         "itemCat":"Beverages",
-        itemQty : 0,
+        itemQty : 10,
         "exp":"1"
     },
 

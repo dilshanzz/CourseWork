@@ -1,22 +1,22 @@
 const orderList = [];
 const itemList = [];
-const customerList = [ {
-  "customerName8" : "Dilshan",
-  "customerId8" : "071xxxxxxx"
+const customerList = [{
+  "customerName8": "Dilshan",
+  "customerId8": "071xxxxxxx"
 }];
 
 function generateOrderId() {
   if (orderList.length === 0) {
-      document.getElementById("txt-order-id").value = 'ODR#00001';
+    document.getElementById("txt-order-id").value = 'ODR#00001';
   } else {
-      let lastOrderId = orderList[orderList.length - 1];
-      console.log('Type of lastOrderId:', typeof lastOrderId);
-      console.log('Value of lastOrderId:', lastOrderId);
+    let lastOrderId = orderList[orderList.length - 1];
+    console.log('Type of lastOrderId:', typeof lastOrderId);
+    console.log('Value of lastOrderId:', lastOrderId);
 
-      let orderID = lastOrderId.split('#');
-      let num = parseInt(orderID[1], 10); 
-      let num1 = num + 1;
-      document.getElementById("txt-order-id").value = 'ODR#' + num1;
+    let orderID = lastOrderId.split('#');
+    let num = parseInt(orderID[1], 10);
+    let num1 = num + 1;
+    document.getElementById("txt-order-id").value = 'ODR#' + num1;
   }
 }
 generateOrderId();
@@ -35,28 +35,28 @@ function addItemList() {
     alert("Something went wrong!");
     return;
   }
-  for(let i=0; i<storeList.length; i++){
-    if(storeList[i].itemQty<itemQty2 || storeList[i].ite ){
-      alert("Not enough "+itemName2+" s.");
+  for (let i = 0; i < storeList.length; i++) {
+    if (storeList[i].itemQty < itemQty2 || storeList[i].ite) {
+      alert("Not enough " + itemName2 + " s.");
       return;
-    }else if(itemName2 != storeList[i].itemName){
+    } else if (itemName2 != storeList[i].itemName) {
       alert("item not exist");
-    }else if(itemCode2 != storeList[i].itemCode){
+    } else if (itemCode2 != storeList[i].itemCode) {
       alert("item Not exist")
-     
-    }else{
+
+    } else {
       itemList.push({
         itemName9: itemName2,
         itemCode9: itemCode2,
         itemCategory9: itemCategory2,
         itemQty9: itemQty2,
         itemAmount9: itemAmount2,
-        itemDiscount9: itemDiscount2,    
+        itemDiscount9: itemDiscount2,
       })
       console.log("item Added")
     }
 
-  } 
+  }
 }
 
 function addOrderList() {
@@ -80,7 +80,7 @@ function addOrderList() {
     orderTime8: orderTime3,
     orderId8: orderId3,
     totalAmount8: orderTotalAmount3,
-    totalDisc8 : orderDiscount3
+    totalDisc8: orderDiscount3
   });
   console.log("Order added");
   generateOrderId();
@@ -94,17 +94,17 @@ function addCustomerList() {
     alert("Customer cannot be added!");
     return;
   }
-  for(let i=0; i<customerList.length; i++){
-    if(customerName4 === customerList[i].customerName8){
+  for (let i = 0; i < customerList.length; i++) {
+    if (customerName4 === customerList[i].customerName8) {
       console.log("Customer Exists")
-    return;
+      return;
 
-    }else{
+    } else {
       customerList.push({
         customerName9: customerName4,
         customerId9: customerId4
-      });   
-      console.log("Customer added");   
+      });
+      console.log("Customer added");
     }
   }
 }
@@ -129,26 +129,26 @@ function visibleInCart() {
         <input class="form-control cart-txt-namefield" type="text" value="${itemNameO}" readonly>
       </div>
       <div class="col-lg-5 col-sm-6">
-        <input class="form-control cart-txtamount" type="text" value="${itemQtyO *(  itemAmountO - itemDisO / 100)}" readonly>
+        <input class="form-control cart-txtamount" type="text" value="${itemQtyO * (itemAmountO - itemDisO / 100)}" readonly>
       </div>
       <div class="col-lg-7 col-sm-6 cart-container-padding">
         <input class="form-control cart-txt-namefield" type="text" value="${itemCodeO + "*" + itemQtyO}" readonly>
       </div>
       <div class="col-lg-5 col-sm-6 mb-1">
-        <input class="form-control cart-txtamount cart-container-padding" type="text" value="${itemAmountO * itemDisO/100 }" readonly>
+        <input class="form-control cart-txtamount cart-container-padding" type="text" value="${itemAmountO * itemDisO / 100}" readonly>
       </div>
     `;
     totalO += itemAmountO;
     totaldisO += itemDisO;
     cartContainer.appendChild(cartItemDiv);
   });
-  
+
 
   document.getElementById("cart-txt-totalamount").value = totalO;
   document.getElementById("cart-txt-totaldis").value = totaldisO;
 }
 
-function buttonClickHandler1() { 
+function buttonClickHandler1() {
   addItemList();
   addCustomerList();
   console.log(itemList);
@@ -157,8 +157,8 @@ function buttonClickHandler1() {
 }
 
 function buttonClickHandler2() {
-    addOrderList(); 
-    console.log(orderList);
+  addOrderList();
+  console.log(orderList);
   let cartContainer = document.getElementById("cart-container1");
   cartContainer.innerHTML = "";
 }

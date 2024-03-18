@@ -1,8 +1,20 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Your initialization code
+function drawTable(storeList) {
+    const tableBody = document.getElementById("item-table-body");
 
-    // Call drawTable after ensuring storeList is populated
-    drawTable(storeList);
+    tableBody.innerHTML = "";
+    for (let i = 0; i < storeList.length; i++) {
+        tableBody.innerHTML += `
+            <tr>
+                <td>${storeList[i].itemCode}</td>
+                <td>${storeList[i].itemName}</td>
+                <td>${storeList[i].itemQty}</td>
+                <td>${storeList[i].itemCat}</td>
+                <td>${storeList[i].amount}</td>
+                <td>${storeList[i].dis}</td>
+                <td>${storeList[i].exp}</td>
+            </tr>
+        `;
+    }
+}
 
-    // Rest of your code...
-});
+drawTable(storeList);

@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-        crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="CSS\item.css">    
 
     <title>Manage Items</title>
@@ -29,159 +28,55 @@
         </div>
     </nav>
     
-   <div class="container  " style="margin-top: 2rem; margin-left: 17rem;" >
-   
-    
-    <div class="row">
-        <div class="col-lg-10 col-sm-12" 
-        style="border: solid black; margin-right: 0.5rem; height: 37rem;" >
-        <label for="" class=" form-check-label" 
-        style=" margin-left: 15rem; font-weight: bolder; font-size: x-large;">
-                Add , Update  or Delete Item</label>
-        <div class="container ml-3" style="margin-top: 1rem;">
-    <div class="row">
-       
-
-      <div class="col-lg-3 col-sm-12 mt-4 container-margin" >
-         <label for="manage-item-name1 " class="container-margin ">
-                 Item name</label><br>
-      </div> 
-
-      <div class="col-lg-7 col-sm-7 mt-4">
-        <input class="form-control" type="text" id="manage-item-name1"><br> 
-      </div>
-
-      <div class="col-lg-2 col-sm-2 search-name"
-         style="margin-top: 1.4rem; margin-left: -1rem;">
-        <button class="btn" id="m-search-btn1" type="button">Search</button>
-      </div>
-      
-
-
-    </div>
-  </div>
-  <div class="container ml-3">
-    <div class="row">
-
-      <div class="col-lg-3 col-sm-12  container-margin">
-         <label for="manage-item-code1 " class="container-margin ">
-                 Item Code</label><br>
-      </div> 
-      <div class="col-lg-3 col-sm-7 ">
-        <input class="form-control" type="text" id="manage-item-code1"><br> 
-      </div> 
-      <div class="col-lg-2 col-sm-2 ">
-        <button class="btn" id="m-search-btn2">Search</button>
-      </div>
-    </div>
-  </div>
-  <div class="container ml-lg-3 ml-sm-1">
-    <div class="row">
-        <div class="col-lg-3 col-sm-12  container-margin">
-            <label for="item-qty1 "  class="container-margin"
-                 style="margin-bottom: 3rem;"> Quantity</label>
-        </div> 
-        <div class="col-lg-3 col-sm-12 ">
-            <input class="form-control" type="text" id="item-qty1"> 
-        </div> 
-        <div class="col-lg-2 col-sm-2 " >
-            <button class="btn" id="change-qty">Change</button>
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-10 col-md-10 col-sm-12">
+              <table class="table" id="item-table">
+                  <thead>
+                      <tr>
+                          <th>Item Code</th>
+                          <th  style="padding-left: 4rem;">Item Name</th>
+                          <th>Quantity</th>
+                          <th>Category</th>
+                          <th>Amount</th>
+                          <th>Discount</th>
+                          <th>Expiration Date</th>
+                          <th>Option 1</th>
+                          <th>Option 2</th>
+                      </tr>
+                  </thead>
+                  <tbody id="item-table-body">
+                     
+                  </tbody>
+              </table>
+          </div>
+          <div id="myModal" class="modal " tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"> Item Deletion</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>This process Cannot be undo</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger" onclick="proceed()" data-bs-dismiss="modal" >Delete</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        
-
-    </div>
-</div>
-  <div class="container ml-lg-3 ml-sm-1 mb-5 container-margin" style="margin-top: -1rem; ">
-    <div class="row">
-        <div class="col-lg-3 col-sm-12  container-margin">
-            <label for="m-cat1 "  class="container-margin"> Category</label>
-        </div> 
-        <div class="col-lg-4 col-sm-12 ">
-            <input class="form-control" type="text" id="m-cat1"> 
-        </div> 
-        <div class="col-lg-2 col-sm-2 " >
-            <button class="btn" id="change-cat" >Change</button>
-        </div>
-    </div>
-</div>
-  <div class="container ml-3 " style="margin-top: -1.rem; margin-bottom: 1rem;">
-    <div class="row">
-
-      <div class="col-lg-3 col-sm-4  "  >
-         <label for="manage-amount1 "  class="container-margin"> Amount</label><br>
-      </div> 
-      <div class="col-lg-3 col-sm-2 ">
-        <input class="form-control" type="text" id="manage-amount1" style="margin-top: -1rem;"><br> 
-      </div> 
-      <div class="col-lg-2 col-sm-2 " style="margin-top: 1rem;">
-        <button class="btn" id="change-amount" style="margin-top: -4rem;">Change</button>
       </div>
-     
-     
-     
-    </div>
   </div>
-  <div class="container ml-3 " style="margin-top: -1rem;">
-    <div class="row">
-        <div class="col-lg-3 col-sm-4  " >
-            <label for="manage-dis1 "  class="container-margin"> 
-                    Discount</label><br>
-         </div> 
-         <div class="col-lg-3 col-sm-2 ">
-           <input class="form-control" type="text" id="manage-dis1"><br> 
-         </div> 
-         <div class="col-lg-2 col-sm-2 " style="margin-top: 1.3rem;">
-            <button class="btn" id="change-dis" style="margin-top: -1.9rem;">Change</button>
-          </div>    
-    </div>
-  </div>
- 
-  <div class="container ml-3" style="margin-top: -1rem;">
-    <div class="row">
 
-      <div class="col-lg-3 col-sm-12 mt-4 container-margin" >
-         <label for="exp-1" class="container-margin " > Expire Date</label><br>
-      </div> 
+  <!-- <script src="JS\store.js"></script> -->
+  <script src="JS/store.js"></script>
+  <script src="JS\item.js"></script>
+  <script src="JS\manage.js" defer></script>
 
-      <div class="col-lg-5 col-sm-7 " >
-        <input class="form-control" type="text" id="exp-1"
-             style="margin-bottom: -2rem; margin-top: 1.5rem;"><br> 
-      </div>
-      <div class="col-lg-2 col-sm-2 " style="margin-top: 1.8rem;">
-        <button class="btn" id="change-exp">Change</button>
-      </div>
   
-    </div>
-  </div>
-  <div class="container " style=" margin-top: 1rem;">
-    <div class="row">
-    
-      <div class="col-lg-2 col-sm-12 mt-4 container-margin" 
-            style="margin-left: 8rem;">
-        <button id="m-btn-add-1" class="btn addon">Add Item</button>
-      </div> 
-      <div class="col-lg-2 col-sm-12 mt-4 container-margin" 
-            style="margin-left: 4rem;">
-        <button id="m-btn-clear" class="btn " >Clear</button>
-      </div> 
-      <div class="col-lg-4 col-sm-12 mt-4 container-margin" 
-            style="margin-left: 4rem;">
-        <button id="m-btn-delete" class="btn " >Delete Item</button>
-      </div> 
-    </div>
-  </div>
-    </div>
-    </div>
-   </div>
-
-   <script src="JS\store.js"></script>
-   <script src="JS\item.js"></script> 
-   <script src="JS\manage.js"></script>
-   
-    
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>

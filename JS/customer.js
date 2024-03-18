@@ -17,10 +17,8 @@ function drawTable(customerList) {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Your initialization code
-
-    // Call drawTable after ensuring storeList is populated
+   
     drawTable(customerList);
 
-    // Rest of your code...
+   
 });
