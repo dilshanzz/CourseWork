@@ -50,6 +50,10 @@
                   </tbody>
               </table>
           </div>
+          <div class="col-2 mt-2">
+            <button style="margin-left: 0.8rem;" class="btn btn-primary" onclick="addItem()">Add New Item</button>
+          </div>
+          
           <div id="myModal" class="modal " tabindex="-1">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -67,6 +71,138 @@
                 </div>
             </div>
         </div>
+        <div id="myModal1" class="modal " tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Update Items</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="mb-3 row">
+                                    <label for="itn-code" class="col-sm-2 col-form-label">Item Code</label>
+                                    <div class="col-sm-10">
+                                      <input type="text" readonly class="form-control-plaintext" id="itm-code" value="None">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-name" class="col-sm-2 col-form-label">Name</label>
+                                    <div class="col-lg-5 col-sm-10">
+                                      <input type="text" class="form-control" id="itm-name">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-qty" class="col-sm-2 col-form-label">Item QTY</label>
+                                    <div class="col-lg-3 col-sm-3">
+                                      <input type="text" class="form-control"  id="itm-qty" >
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-catgry" class="col-sm-2 col-form-label">Category</label>
+                                    <div class="col-lg-5 col-sm-10">
+                                      <input type="text" class="form-control" id="itm-catgry">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-amount" class="col-sm-2 col-form-label">Amount</label>
+                                    <div class="col-lg-3 col-sm-6">
+                                      <input type="text" class="form-control"  id="itm-amount" >
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-disc" class="col-sm-2 col-form-label">Discount</label>
+                                    <div class="col-lg-1 col-sm-2">
+                                      <input type="text" class="form-control" id="itm-disc">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-exp" class="col-sm-2 col-form-label">Exp Date</label>
+                                    <div class="col-lg-5 col-sm-10">
+                                      <input type="text" class="form-control" id="itm-exp">
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-warning" onclick="saveChanges()" data-bs-dismiss="modal" >Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="myModal2" class="modal " tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Update Items</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="mb-3 row">
+                                    <label for="itm-code1" class="col-sm-2 col-form-label">Item Code</label>
+                                    <div class="col-sm-10">
+                                      <input type="text"  class="form-control" id="itm-code1" >
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-name1" class="col-sm-2 col-form-label">Name</label>
+                                    <div class="col-lg-5 col-sm-10">
+                                      <input type="text" class="form-control" id="itm-name1">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-qty1" class="col-sm-2 col-form-label">Item QTY</label>
+                                    <div class="col-lg-3 col-sm-3">
+                                      <input type="number" class="form-control"  id="itm-qty1" >
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-catgry1" class="col-sm-2 col-form-label">Category</label>
+                                    <div class="col-lg-5 col-sm-10">
+                                      <input type="text" class="form-control" id="itm-catgry1">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-amount1" class="col-sm-2 col-form-label">Amount</label>
+                                    <div class="col-lg-3 col-sm-6">
+                                      <input type="number" class="form-control"  id="itm-amount1" >
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-disc1" class="col-sm-2 col-form-label">Discount</label>
+                                    <div class="col-lg-1 col-sm-2">
+                                      <input type="number" class="form-control" id="itm-disc1">
+                                    </div>
+                                  </div>
+                                  <div class="mb-3 row">
+                                    <label for="itm-exp1" class="col-sm-2 col-form-label">Exp Date</label>
+                                    <div class="col-lg-5 col-sm-10">
+                                      <input type="text" class="form-control" id="itm-exp1">
+                                    </div>
+                                  </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-warning" onclick="saveNewItem()" data-bs-dismiss="modal" >Save</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+      </div>
+      
+      <div class="row col-2">
+        
       </div>
   </div>
 

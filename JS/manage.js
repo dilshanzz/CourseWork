@@ -23,11 +23,13 @@ function drawTable(storeList) {
 }
 
 drawTable(storeList);
-let index1 =0;
+let index1 = 0;
+console.log(index1);
 
 function deleteItems(index) {
 
-index1 = index;
+    index1 = index;
+    console.log(index1);
 
     const myModal = new bootstrap.Modal(document.getElementById('myModal'));
 
@@ -43,55 +45,82 @@ function proceed() {
 
 function updateItems() {
 
+    const mymodal1 = new bootstrap.Modal(document.getElementById('myModal1'));
+    mymodal1.show();
+    document.getElementById("itm-code").value = storeList[index1].itemCode;
+    document.getElementById("itm-name").value = storeList[index1].itemName;
+    document.getElementById("itm-qty").value = storeList[index1].itemQty;
+    document.getElementById("itm-catgry").value = storeList[index1].itemCat;
+    document.getElementById("itm-amount").value = storeList[index1].amount;
+    document.getElementById("itm-disc").value = storeList[index1].dis;
+    document.getElementById("itm-exp").value = storeList[index1].exp;
+
+}
+
+function saveChanges() {
+    let code = document.getElementById("itm-code").value;
+    let itemNameM = document.getElementById("itm-name").value;
+    let itemQtyM = document.getElementById("itm-qty").value;
+    let itemCatM = document.getElementById("itm-catgry").value;
+    let itemAmountM = document.getElementById("itm-amount").value;
+    let itemDiscM = document.getElementById("itm-disc").value;
+    let itemExpM = document.getElementById("itm-exp").value;
+    if (itemNameM === null || itemNameM === "" || isNaN(itemQtyM) ||
+        itemCatM === null || itemCatM === "" || isNaN(itemAmountM) ||
+        itemExpM === null || itemExpM === "" || isNaN(itemDiscM)) {
+        alert("Fields Cannot be empty");
+        return;
+    }
+    for (i = 0; i < storeList.length; i++) {
+        if (code === storeList[i].itemCode) {
+            storeList[i].itemName = itemNameM;
+            storeList[i].itemQty = itemQtyM;
+            storeList[i].itemCat = itemCatM;
+            storeList[i].amount = itemAmountM;
+            storeList[i].dis = itemDiscM;
+            storeList[i].exp = itemExpM;
+        }
+    }
+
+
+    drawTable(storeList);
 }
 
 function addItem() {
 
-    let itemNameS1 = document.getElementById("manage-item-name1").value;
-    let itemCodeS1 = document.getElementById("manage-item-code1").value;
-    let itemQtyS1 = parseFloat(document.getElementById("item-qty1").value);
-    let itemCatS1 = document.getElementById("m-cat1").value;
-    let amountS1 = parseFloat(document.getElementById("manage-amount1").value);
-    let disS1 = parseFloat(document.getElementById("manage-dis1").value);
-    let expS1 = document.getElementById("exp-1").value;
-
-
-
-
-    if (
-        itemNameS1 === "" || itemCodeS1 === "" || itemNameS1 === null || itemCodeS1 === null
-        || isNaN(itemQtyS1) || itemQtyS1 < 0 ||
-        itemCatS1 === "" || isNaN(amountS1) || amountS1 < 0 ||
-        isNaN(disS1) || disS1 < 0 || expS1 === null || expS1 === ""
-    ) {
-        alert("Fields cannot be empty or contain invalid values");
-        clearItemM();
-
-    }
-
-    storeList.push({
-        itemCode: itemCodeS1,
-        itemName: itemNameS1,
-        amount: amountS1,
-        dis: disS1,
-        itemCat: itemCatS1,
-        itemQty: itemQtyS1,
-        exp: expS1
-    });
-
-    document.getElementById("manage-item-code1").value = "";
-    document.getElementById("manage-item-name1").value = "";
-    document.getElementById("item-qty1").value = "";
-    document.getElementById("m-cat1").value = "";
-    document.getElementById("manage-amount1").value = "";
-    document.getElementById("manage-dis1").value = "";
-    document.getElementById("exp-1").value = "";
-
-
-    drawTable(storeList);
+    const myModal2 = new bootstrap.Modal(document.getElementById("myModal2"));
+    myModal2.show();
 
 }
 
+function saveNewItem(){
+    let code = document.getElementById("itm-code1").value;
+    let itemNameM = document.getElementById("itm-name1").value;
+    let itemQtyM = document.getElementById("itm-qty1").value;
+    let itemCatM = document.getElementById("itm-catgry1").value;
+    let itemAmountM = document.getElementById("itm-amount1").value;
+    let itemDiscM = document.getElementById("itm-disc1").value;
+    let itemExpM = document.getElementById("itm-exp1").value;
+
+    if (itemNameM === null || itemNameM === "" || isNaN(itemQtyM) ||
+        itemCatM === null || itemCatM === "" || isNaN(itemAmountM) ||
+        itemExpM === null || itemExpM === "" || isNaN(itemDiscM)) {
+        alert("Fields Cannot be empty");
+        return;
+    } 
+
+    storeList.push({
+        itemCode: code,
+        itemName: itemNameM,
+        amount: itemAmountM,
+        dis: itemDiscM,
+        itemCat: itemCatM,
+        itemQty: itemQtyM,
+        exp: itemExpM
+    });
+    drawTable(storeList);
+
+}
 
 
 let addonElements = document.getElementsByClassName("addon");
