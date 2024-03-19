@@ -1,3 +1,4 @@
+
 function drawTable(storeList) {
     const tableBody = document.getElementById("item-table-body");
 

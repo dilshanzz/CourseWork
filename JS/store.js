@@ -415,7 +415,3 @@ const storeList = [
     },
 
 ]
-
-   
-
-

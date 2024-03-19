@@ -59,14 +59,14 @@
             <div class="row">
       
               <div class="col-lg-3 col-sm-7  ">
-                <label for="item-name "  class="container-margin"> Item Name</label>
+                <label for="item--name "  class="container-margin"> Item Name</label>
              </div> 
              <div class="col-lg-7 col-sm-12 ">
-              <input class="form-control" type="text" id="item-name"> 
+              <input class="form-control" type="text" id="item--name"> 
             </div> 
              <div class="col-lg-2 col-sm-2 ">
-                <label for=""></label>
-                <button id="item--search" class="btn  searchbtn-custom">Search</button>    
+                
+                <button id="item-search" class="btn  searchbtn-custom" onclick="searchByName()">Search</button>    
               </div>
              
             </div>
@@ -74,14 +74,14 @@
           <div class="container ml-3 container-margin">
             <div class="row">
               <div class="col-lg-3 col-sm-12  container-margin">
-                <label for="item-code "  class="container-margin"> Item Code</label>
+                <label for="item--code "  class="container-margin"> Item Code</label>
              </div> 
              <div class="col-lg-4 col-sm-12 ">
-              <input class="form-control" type="text" id="item-code"> 
+              <input class="form-control" type="text" id="item--code"> 
             </div> 
             <div class="col-lg-3 col-sm-1 ">
               <label for=""></label>
-              <button id="item--search" class="btn  searchbtn-custom">Search</button>    
+              <button id="item-search-code" class="btn  searchbtn-custom" onclick="searchByCode()" >Search</button>    
             </div>
       
             </div>
@@ -181,27 +181,6 @@
                     style="height: 24rem; overflow: scroll;">
                   <div class="row">
                     
-                     
-                        <div class="col-lg-7 col-sm-6">
-                          <input class="form-control " type="text" id="cart-name"><br> 
-                        </div>
-                        <div class="col-lg-5 col-sm-6  ">
-                          <input class="form-control  " type="text" id="cart-amount" ><br> 
-                        </div>
-                        <div class="col-lg-4 col-sm-6 cart-container-padding">
-                          <input class="form-control " type="text" id="cart-code"><br> 
-                        </div>
-                        <div class="col-lg-3 col-sm-6 cart-container-padding">
-                            <input class="form-control " type="text"  id="cart-qty"><br> 
-                          </div>
-                        <div class="col-lg-5 col-sm-6 mb-1 ">
-                          <input class="form-control  cart-container-padding"
-                            type="text" id="cart-dis"><br> 
-                        </div>
-                      
-                     
-                   
-
                   </div>
                  </div>
                  <hr style="border: 0.3rem !important;">
@@ -216,15 +195,15 @@
                             <label for="cart-txt-totaldis">Discount</label>
                             </div>
                             <div class="col-lg-5 col-sm-6  ">
-                            <input class="form-control  " type="text" 
+                            <input  readonly class="form-control-plaintext" value="0" type="text" 
                                 id="cart-txt-totaldis"><br> 
                             </div>
                             <div class="col-lg-7 col-sm-6 cart-container-padding">
                             <label for="cart-txt-totalamount">Payeble amount</label>
                             </div>
                             <div class="col-lg-5 col-sm-6 mb-1 ">
-                            <input class="form-control  cart-container-padding"
-                                 type="text" id="cart-txt-totalamount"><br> 
+                            <input readonly class="form-control-plaintext  cart-container-padding"
+                                 type="text" id="cart-txt-totalamount" value="0"><br> 
                             </div>
                             <div class="col-lg-5 col-sm-6 mb-1 " style="margin-left: 1.5rem;">
                             <button class="btn btn-success" id="place-btn">Place</button>
@@ -253,9 +232,12 @@
    </div>
     
    
-    <script src="JS\order.js"></script>
-    <script src="JS\store.js"></script>
-    <script src="JS\customer.js"></script>
+   <script src="JS/store.js"></script>
+   <script src="JS/order.js"></script>
+   
+    
+    
+   
    
 
    

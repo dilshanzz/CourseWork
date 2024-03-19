@@ -1,9 +1,7 @@
+
+
 const orderList = [];
 const itemList = [];
-const customerList = [{
-  "customerName8": "Dilshan",
-  "customerId8": "071xxxxxxx"
-}];
 
 function generateOrderId() {
   if (orderList.length === 0) {
@@ -21,9 +19,54 @@ function generateOrderId() {
 }
 generateOrderId();
 
+
+function searchByName(){
+  let iName = document.getElementById("item--name").value; 
+  let iCodes = document.getElementById("item--code");
+  iCat = document.getElementById("item-cat");
+  console.log(iName);
+  
+  if(iName !==null && iName !==""){
+    console.log("working")
+    for(i=0; i<storeList.length; i++){
+      if(iName === storeList[i].itemName){
+        
+        console.log(storeList[i].itemCode)
+        iCodes.value = storeList[i].itemCode;
+        iCat.value = storeList[i].itemCat;
+      
+        return;
+      }
+    }
+  }
+  alert("item is invalid");
+  return; 
+}
+
+function searchByCode(){
+  let iCode = document.getElementById("item--code").value; 
+  iCat = document.getElementById("item-cat");
+  
+  
+  if(iCode !==null && iCode !==""){
+    console.log("working")
+    for(i=0; i<storeList.length; i++){
+      if(iCode === storeList[i].itemCode){
+        
+        console.log(storeList[i].itemName)
+        document.getElementById("item--name").value = storeList[i].itemName;
+        iCat.value = storeList[i].itemCat;
+        return;
+      }
+    }
+  }
+  alert("Item is invalid");
+  return; 
+}
+
 function addItemList() {
-  itemName2 = document.getElementById("item-name").value;
-  itemCode2 = document.getElementById("item-code").value;
+  itemName2 = document.getElementById("item--name").value;
+  itemCode2 = document.getElementById("item--code").value;
   itemQty2 = parseFloat(document.getElementById("item-qty").value);
   itemAmount2 = parseFloat(document.getElementById("txt-amount").value);
   itemDiscount2 = parseFloat(document.getElementById("txt-dis").value);
@@ -36,13 +79,15 @@ function addItemList() {
     return;
   }
   for (let i = 0; i < storeList.length; i++) {
-    if (storeList[i].itemQty < itemQty2 || storeList[i].ite) {
+    if (storeList[i].itemQty < itemQty2) {
       alert("Not enough " + itemName2 + " s.");
       return;
     } else if (itemName2 != storeList[i].itemName) {
       alert("item not exist");
+      return;
     } else if (itemCode2 != storeList[i].itemCode) {
       alert("item Not exist")
+      return;
 
     } else {
       itemList.push({
@@ -60,8 +105,7 @@ function addItemList() {
 }
 
 function addOrderList() {
-  customerName3 = document.getElementById("customer-name").value;
-  customerId3 = document.getElementById("h-customer-contact").value;
+  
   orderDate3 = document.getElementById("txt-date").value;
   orderTime3 = document.getElementById("txt-time").value
   orderId3 = document.getElementById("txt-order-id").value;
@@ -74,8 +118,6 @@ function addOrderList() {
     return;
   }
   orderList.push({
-    customerName8: customerName3,
-    customerId8: customerId3,
     orderDate8: orderDate3,
     orderTime8: orderTime3,
     orderId8: orderId3,
@@ -86,33 +128,12 @@ function addOrderList() {
   generateOrderId();
 }
 
-function addCustomerList() {
-  customerName4 = document.getElementById("customer-name").value;
-  customerId4 = document.getElementById("h-customer-contact").value;
 
-  if (!customerName4 || !customerId4) {
-    alert("Customer cannot be added!");
-    return;
-  }
-  for (let i = 0; i < customerList.length; i++) {
-    if (customerName4 === customerList[i].customerName8) {
-      console.log("Customer Exists")
-      return;
-
-    } else {
-      customerList.push({
-        customerName9: customerName4,
-        customerId9: customerId4
-      });
-      console.log("Customer added");
-    }
-  }
-}
 
 function visibleInCart() {
   let totalO = 0, totaldisO = 0;
   let cartContainer = document.getElementById("cart-container1");
-  cartContainer.innerHTML = "";
+  
 
   itemList.forEach(function (item) {
     let cartItemDiv = document.createElement('div');
@@ -124,7 +145,7 @@ function visibleInCart() {
     let itemDisO = item.itemDiscount9;
     let itemQtyO = item.itemQty9;
 
-    cartItemDiv.innerHTML = `
+    cartItemDiv.innerHTML += `
       <div class="col-lg-7 col-sm-6">
         <input class="form-control cart-txt-namefield" type="text" value="${itemNameO}" readonly>
       </div>
@@ -150,7 +171,7 @@ function visibleInCart() {
 
 function buttonClickHandler1() {
   addItemList();
-  addCustomerList();
+  //addCustomerList();
   console.log(itemList);
   console.log(customerList);
   visibleInCart();
@@ -174,16 +195,13 @@ addButton.addEventListener("click", buttonClickHandler1);
 const placeButton = document.getElementById("place-btn");
 placeButton.addEventListener("click", buttonClickHandler2);
 
-document.getElementById("clear-customer-btn").addEventListener("click", clearCustomer);
+
 document.getElementById("clear-item-btn").addEventListener("click", clearItem);
 document.getElementById("clear-order-btn").addEventListener("click", clearOrder);
-document.getElementById("exit-btn").addEventListener("click", exitPos);
-document.getElementById("clear-btn").addEventListener("click", clearCart);
+//document.getElementById("exit-btn").addEventListener("click", exitPos);
+//document.getElementById("clear-btn").addEventListener("click", clearCart);
 
-function clearCustomer() {
-  document.getElementById("customer-name").value = "";
-  document.getElementById("h-customer-contact").value = "";
-}
+
 
 function clearOrder() {
   document.getElementById("customer-name").value = "";
@@ -205,13 +223,4 @@ function clearItem() {
   document.getElementById("txt-dis").value = "";
 }
 
-function clearCart() {
-  customerList.pop();
-  itemList.pop();
-  let cartContainer = document.getElementById("cart-container1");
-  cartContainer.innerHTML = "";
-}
 
-function exitPos() {
-  return;
-};
