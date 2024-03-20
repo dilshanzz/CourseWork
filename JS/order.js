@@ -221,10 +221,7 @@ function buttonClickHandler2() {
  
 }
 
-function reFresh1() {
-  let cartContainer = document.getElementById("cart-container1");
-  cartContainer.innerHTML = "";
-}
+
 
 const addButton = document.getElementById("cart-add-btn");
 addButton.addEventListener("click", buttonClickHandler1);
@@ -233,9 +230,6 @@ addButton.addEventListener("click", buttonClickHandler1);
 
 
 document.getElementById("clear-item-btn").addEventListener("click", clearItem);
-//document.getElementById("clear-order-btn").addEventListener("click", clearOrder);
-//document.getElementById("exit-btn").addEventListener("click", exitPos);
-//document.getElementById("clear-btn").addEventListener("click", clearCart);
 
 function exitPos(){
   const mymodal4 = new bootstrap.Modal(document.getElementById("exampleModal")) 

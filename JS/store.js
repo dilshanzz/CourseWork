@@ -415,3 +415,28 @@ const storeList = [
     },
 
 ]
+
+const userList = [
+    {
+        "userName" : "dilshan",
+        "password" : "mos123"
+    }
+]
+
+function logIn(){
+    let userName = document.getElementById('txt-username').value ;
+    let password = document.getElementById('txt-password').value ;
+    let match = false;
+    for(i=0; i<userList.length; i++){
+        if(userName===userList[i].userName && 
+            password === userList[i].password){
+                match = true;
+                break;
+         }
+    }
+    if(match){
+        window.location.href = "../home.html"
+    }else{
+        alert("Invalid Username Or Password")
+    }
+}
