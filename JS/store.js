@@ -435,7 +435,7 @@ function logIn(){
          }
     }
     if(match){
-        window.location.href = "../home.html"
+       window.location.replace("home.html");
     }else{
         alert("Invalid Username Or Password")
     }
