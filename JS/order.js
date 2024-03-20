@@ -7,14 +7,15 @@ function generateOrderId() {
   if (orderList.length === 0) {
     document.getElementById("txt-order-id").value = 'ODR#00001';
   } else {
-    let lastOrderId = orderList[orderList.length - 1];
+    let lastOrderId = orderList[orderList.length - 1].orderId8;
     console.log('Type of lastOrderId:', typeof lastOrderId);
     console.log('Value of lastOrderId:', lastOrderId);
 
     let orderID = lastOrderId.split('#');
-    let num = parseInt(orderID[1], 10);
-    let num1 = num + 1;
-    document.getElementById("txt-order-id").value = 'ODR#' + num1;
+    let num = parseInt(orderID[1]);
+    num++;
+    num = num.toString().padStart(5, '0')
+    document.getElementById("txt-order-id").value = 'ODR#' + num;
   }
 }
 generateOrderId();
@@ -115,7 +116,7 @@ function addOrderList() {
   orderTotalAmount3 = parseFloat(document.getElementById("cart-txt-totalamount").value);
   orderDiscount3 = parseFloat(document.getElementById("cart-txt-totaldis").value);
 
-  if (!customerName3 || !customerId3 || !orderId3 || !orderDate3 || !orderTime3 ||
+  if (!orderId3 || !orderDate3 || !orderTime3 ||
     isNaN(orderTotalAmount3) || isNaN(orderDiscount3) || orderTotalAmount3 && orderDiscount3 < 0) {
     alert("Something went wrong!");
     return;
@@ -125,9 +126,11 @@ function addOrderList() {
     orderTime8: orderTime3,
     orderId8: orderId3,
     totalAmount8: orderTotalAmount3,
-    totalDisc8: orderDiscount3
+    totalDisc8: orderDiscount3,
+    list : itemList 
   });
   console.log("Order added");
+ 
   generateOrderId();
 }
 
@@ -148,6 +151,7 @@ function visibleInCart() {
     let itemAmountO = item.itemAmount9;
     let itemDisO = item.itemDiscount9;
     let itemQtyO = item.itemQty9;
+    
 
     cartItemDiv.innerHTML += `
       <div class="col-lg-7 col-sm-6">
@@ -173,6 +177,15 @@ function visibleInCart() {
   document.getElementById("cart-txt-totaldis").value = totaldisO;
 }
 
+function placeOrder(){
+  addOrderList();
+  console.log(orderList);
+  let cartContainer = document.getElementById("cart-container1");
+  cartContainer.innerHTML = "";
+  clearItem();
+
+}
+
 function buttonClickHandler1() {
   addItemList();
   //addCustomerList();
@@ -182,10 +195,9 @@ function buttonClickHandler1() {
 }
 
 function buttonClickHandler2() {
-  addOrderList();
+ 
   console.log(orderList);
-  let cartContainer = document.getElementById("cart-container1");
-  cartContainer.innerHTML = "";
+ 
 }
 
 function reFresh1() {
@@ -196,16 +208,22 @@ function reFresh1() {
 const addButton = document.getElementById("cart-add-btn");
 addButton.addEventListener("click", buttonClickHandler1);
 
-const placeButton = document.getElementById("place-btn");
-placeButton.addEventListener("click", buttonClickHandler2);
+
 
 
 document.getElementById("clear-item-btn").addEventListener("click", clearItem);
-document.getElementById("clear-order-btn").addEventListener("click", clearOrder);
+//document.getElementById("clear-order-btn").addEventListener("click", clearOrder);
 //document.getElementById("exit-btn").addEventListener("click", exitPos);
 //document.getElementById("clear-btn").addEventListener("click", clearCart);
 
+function exitPos(){
+  const mymodal4 = new bootstrap.Modal(document.getElementById("exampleModal")) 
+  mymodal4.show();
+}
 
+function exitConfirm(){
+  window.location.href = "login.html"
+}
 
 function clearOrder() {
   document.getElementById("Item Name").value = "";
@@ -217,12 +235,20 @@ function clearOrder() {
 }
 
 function clearItem() {
-  document.getElementById("Item-Name").value = "";
-  document.getElementById("item-code").value = "";
-  document.getElementById("item-cat").value = "";
-  document.getElementById("item-qty").value = "";
-  document.getElementById("txt-amount").value = "";
-  document.getElementById("txt-dis").value = "";
+   
+  let code = document.getElementById("item--code");
+  let cat = document.getElementById("item-cat");
+  let aty = document.getElementById("item-qty");
+  let amount = document.getElementById("txt-amount");
+  let discount = document.getElementById("txt-dis");
+
+  
+  code.value = "";
+  cat.value = "";
+  aty.value = "";
+  amount.value = "";
+  discount.value = "";
+  document.getElementById("item--name").value = "";
 }
 
 
