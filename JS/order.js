@@ -19,6 +19,27 @@ function generateOrderId() {
   }
 }
 generateOrderId();
+setDateTime();
+function setDateTime(){
+  let today = new Date();
+
+  let date = today.getDate();
+  let month = today.getMonth()+1;
+  let year = today.getFullYear();
+
+  let currentDate = `${date}/${month}/${year}`;
+
+  let hours = today.getHours();
+  let minutes = today.getMinutes();
+
+  let zeroTime = minutes < 10 ? '0' + minutes : minutes;
+
+  let currentTime = `${hours}:${zeroTime}`
+
+  document.getElementById("txt-time").value = currentTime;
+
+  document.getElementById("txt-date").value = currentDate;
+}
 
 
 function searchByName(){
