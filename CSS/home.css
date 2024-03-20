@@ -44,10 +44,11 @@ body{
 }
 
 .cart-container{
-border:solid 0.1rem ;
+
 width: 25rem;
 height: 34rem;
 background-color:white ;
+border-radius: 1rem;
 
 }
 

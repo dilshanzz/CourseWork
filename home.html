@@ -2,250 +2,244 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="CSS\home.css">
-    
-    <title>Your Page Title</title>
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="CSS\home.css">
+
+  <title>Your Page Title</title>
+
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-md navbar-light navbar-custom">
-        <div class="container">
-
-           
-
-            <a class="navbar-brand mx-auto mos-bug" href="manage.html">MOS Burgers</a>
-          
-
-            <div class="navbar-nav ml-auto links-custom">
-              <a class="nav-link links-custom" href="item.html">View Items</a>
-              <a class="nav-link links-custom" href="manage.html">Manage Items</a>
-              <a class="nav-link links-custom" href="reports.html">Reports</a>
-            </div>
-
-        </div>
-    </nav>
-
+  <nav class="navbar navbar-expand-md navbar-light navbar-custom">
     <div class="container">
-      <div class="row">
 
-        <div class="col-lg-8 col-sm-12 ml-0">
-          <div class="container ml-3 mt-3">
-            <div class="row">
-       
-              <div class="col-lg-3 col-sm-4  ">
-                 <label for="txt-date "  class="container-margin"> Date</label><br>
-              </div> 
-              <div class="col-lg-3 col-sm-2 ">
-                <input class="form-control" type="text" id="txt-date"><br> 
-              </div> 
-              <div class="col-lg-2 col-sm-4  ">
-                <label for="txt-time"  class="container-margin">Time</label><br>
-             </div> 
-             <div class="col-lg-3 col-sm-2 " style="margin-left: 0.41rem;">
-               <input class="form-control" type="text" id="txt-time"><br> 
-             </div> 
-             
 
+
+      <a class="navbar-brand mx-auto mos-bug" href="manage.html">MOS Burgers</a>
+
+
+      <div class="navbar-nav ml-auto links-custom">
+        <a class="nav-link links-custom" href="item.html">View Items</a>
+        <a class="nav-link links-custom" href="manage.html">Manage Items</a>
+        <a class="nav-link links-custom" href="reports.html">Reports</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+
+      <div class="col-lg-8 col-sm-12 ml-0" >
+        <div class="container ml-3 mt-3">
+          <div class="row">
+
+            <div class="col-lg-3 col-sm-4  ">
+              <label for="txt-date " class="container-margin"> Date</label><br>
             </div>
-          </div>
-          <div class="container ml-3">
-            <div class="row">
-      
-              <div class="col-lg-3 col-sm-7  ">
-                <label for="item--name "  class="container-margin"> Item Name</label>
-             </div> 
-             <div class="col-lg-7 col-sm-12 ">
-              <input class="form-control" type="text" id="item--name"> 
-            </div> 
-             <div class="col-lg-2 col-sm-2 ">
-                
-                <button id="item-search" class="btn  searchbtn-custom" onclick="searchByName()">Search</button>    
-              </div>
-             
+            <div class="col-lg-3 col-sm-2 ">
+              <input class="form-control" type="text" id="txt-date"><br>
             </div>
+            <div class="col-lg-2 col-sm-4  ">
+              <label for="txt-time" class="container-margin">Time</label><br>
+            </div>
+            <div class="col-lg-3 col-sm-2 " style="margin-left: 0.41rem;">
+              <input class="form-control" type="text" id="txt-time"><br>
+            </div>
+
+
           </div>
-          <div class="container ml-3 container-margin">
-            <div class="row">
-              <div class="col-lg-3 col-sm-12  container-margin">
-                <label for="item--code "  class="container-margin"> Item Code</label>
-             </div> 
-             <div class="col-lg-4 col-sm-12 ">
-              <input class="form-control" type="text" id="item--code"> 
-            </div> 
+        </div>
+        <div class="container ml-3">
+          <div class="row">
+
+            <div class="col-lg-3 col-sm-7  ">
+              <label for="item--name " class="container-margin"> Item Name</label>
+            </div>
+            <div class="col-lg-7 col-sm-12 ">
+              <input class="form-control" type="text" id="item--name">
+            </div>
+            <div class="col-lg-2 col-sm-2 ">
+
+              <button id="item-search" class="btn  searchbtn-custom" onclick="searchByName()">Search</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="container ml-3 container-margin">
+          <div class="row">
+            <div class="col-lg-3 col-sm-12  container-margin">
+              <label for="item--code " class="container-margin"> Item Code</label>
+            </div>
+            <div class="col-lg-4 col-sm-12 ">
+              <input class="form-control" type="text" id="item--code">
+            </div>
             <div class="col-lg-3 col-sm-1 ">
               <label for=""></label>
-              <button id="item-search-code" class="btn  searchbtn-custom" onclick="searchByCode()" >Search</button>    
+              <button id="item-search-code" class="btn  searchbtn-custom" onclick="searchByCode()">Search</button>
             </div>
-      
+
+          </div>
+        </div>
+        <div class="container ml-3 container-margin">
+          <div class="row">
+            <div class="col-lg-3 col-sm-12  container-margin">
+              <label for="item-cat " class="container-margin"> Category</label>
             </div>
+            <div class="col-lg-4 col-sm-12 ">
+              <input class="form-control" type="text" id="item-cat">
             </div>
-            <div class="container ml-3 container-margin">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12  container-margin">
-                        <label for="item-cat "  class="container-margin"> Category</label>
-                    </div> 
-                    <div class="col-lg-4 col-sm-12 ">
-                    <input class="form-control" type="text" id="item-cat"> 
-                    </div> 
-          
-                </div>
+
+          </div>
+        </div>
+        <div class="container ml-3 container-margin">
+          <div class="row">
+            <div class="col-lg-3 col-sm-12  container-margin">
+              <label for="item-qty " class="container-margin"> Quantity</label>
             </div>
-            <div class="container ml-3 container-margin">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-12  container-margin">
-                        <label for="item-qty "  class="container-margin"> Quantity</label>
-                    </div> 
-                    <div class="col-lg-2 col-sm-12 ">
-                    <input class="form-control" type="text" id="item-qty"> 
-                    </div> 
-          
-                </div>
+            <div class="col-lg-2 col-sm-12 ">
+              <input class="form-control" type="text" id="item-qty">
             </div>
-          <div class="container ml-3 mt-3">
-            <div class="row">
-              <div class="col-lg-3 col-sm-4  ">
-                <label for="txt-amount "  class="container-margin"> Amount(LKR)</label><br>
-             </div> 
-             <div class="col-lg-3 col-sm-2 ">
-               <input class="form-control" type="text" id="txt-amount"><br> 
-             </div> 
-             <div class="col-lg-2 col-sm-4  ">
-               <label for="txt-dis "  class="container-margin">Discount</label><br>
-            </div> 
+
+          </div>
+        </div>
+        <div class="container ml-3 mt-3">
+          <div class="row">
+            <div class="col-lg-3 col-sm-4  ">
+              <label for="txt-amount " class="container-margin"> Amount(LKR)</label><br>
+            </div>
+            <div class="col-lg-3 col-sm-2 ">
+              <input class="form-control" type="text" id="txt-amount"><br>
+            </div>
+            <div class="col-lg-2 col-sm-4  ">
+              <label for="txt-dis " class="container-margin">Discount</label><br>
+            </div>
             <div class="col-lg-3 col-sm-2 " style="margin-left: 0.41rem;">
-              <input class="form-control" type="text" id="txt-dis"><br> 
-            </div> 
+              <input class="form-control" type="text" id="txt-dis"><br>
+            </div>
           </div>
         </div>
-      
-        <div class="container ml-3 mt-3"> 
+
+        <div class="container ml-3 mt-3">
           <div class="row">
-      
-            <div  class="col-lg-4 col-sm-2">
+
+            <div class="col-lg-4 col-sm-2">
               <button id="cart-add-btn" class="btn btn-success">Add to Cart</button>
-          </div>
-      
+            </div>
+            <div class="col-lg-3 col-sm-3">
+              <button id="clear-item-btn" class="btn btn-outline-danger">Clear Item</button>
+            </div>
+
           </div>
         </div>
-        
-        <div class="container ml-3 mt-3"> 
+
+        <div class="container ml-3 mt-3">
           <div class="row">
-      
-            <div  class="col-lg-3 col-sm-3">
-              <button id="clear-customer-btn" class="btn btn-outline-danger">Clear Customer</button>
+            <hr>
+
+            
           </div>
-      
-          <div  class="col-lg-3 col-sm-3">
-            <button  id="clear-item-btn" class="btn btn-outline-danger">Clear Item</button>
+          <hr>
+          <div class="row">
+            <div class="col-lg-4 col-sm-3 mt-5">
+              <button id="exit-btn" class="btn btn-danger">Exit</button>
+            </div>
           </div>
-      
-          <div  class="col-lg-3 col-sm-3">
-            <button id="clear-order-btn" class="btn btn-secondary">Clear Order</button>
-          </div>
-      
-          <div  class="col-lg-3 col-sm-3">
-            <button id="exit-btn" class="btn btn-danger">Exit</button>
-          </div>
-             
-          </div>
-      
+
         </div>
-  
-        </div>
-    
-          <div class="col-lg-4 col-sm-8 mt-2">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-6 col-sm-6">
-                  <label for="txt-order-id"> Order Id</label>
-                </div>
-                <div class="col-lg-6 col-sm-6">
-                  <input class="form-control" type="text" id="txt-order-id"><br> 
-                </div>
-              </div>
-            </div>
-            <div>
-                
-            </div>
-            <div   class="container  cart-container ml-2">
-                <div class="row" >
-
-                 <div id="cart-container1" class="container" 
-                    style="height: 24rem; overflow: scroll;">
-                  <div class="row">
-                    
-                  </div>
-                 </div>
-                 <hr style="border: 0.3rem !important;">
-                
-                 <div class="container">
-                  <div class="row">
-                    
-                        <div class="grid text-center" style="--bs-columns: 2; 
-                            margin-top: 0.2rem;" >
-                        <div class="row">
-                            <div class="col-lg-7 col-sm-6">
-                            <label for="cart-txt-totaldis">Discount</label>
-                            </div>
-                            <div class="col-lg-5 col-sm-6  ">
-                            <input  readonly class="form-control-plaintext" value="0" type="text" 
-                                id="cart-txt-totaldis"><br> 
-                            </div>
-                            <div class="col-lg-7 col-sm-6 cart-container-padding">
-                            <label for="cart-txt-totalamount">Payeble amount</label>
-                            </div>
-                            <div class="col-lg-5 col-sm-6 mb-1 ">
-                            <input readonly class="form-control-plaintext  cart-container-padding"
-                                 type="text" id="cart-txt-totalamount" value="0"><br> 
-                            </div>
-                            <div class="col-lg-5 col-sm-6 mb-1 " style="margin-left: 1.5rem;">
-                            <button class="btn btn-success" id="place-btn">Place</button>
-                            </div>
-                            <div class="col-lg-5 col-sm-6 mb-1 ">
-                            <button class="btn btn-danger" id="clear-btn">Clear</button>
-                            </div>
-                            
-                        </div>    
-                        </div>
-                     </div>
-                 </div>
-                 
-                 
-                
-              </div>
-              
-
-            </div>
-
-          </div>
-
-          </div>
 
       </div>
-   </div>
-    
-   
-   <script src="JS/store.js"></script>
-   <script src="JS/order.js"></script>
-   
-    
-    
-   
-   
 
-   
-    
-   
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+      <div class="col-lg-4 col-sm-8 mt-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6 col-sm-6">
+              <label for="txt-order-id"> Order Id</label>
+            </div>
+            <div class="col-lg-6 col-sm-6">
+              <input class="form-control" type="text" id="txt-order-id"><br>
+            </div>
+          </div>
+        </div>
+        <div>
+
+        </div>
+        <div class="container  cart-container ml-2">
+          <div class="row">
+
+            <div id="cart-container1" class="container" style="height: 24rem; overflow: scroll;">
+              <div class="row">
+
+              </div>
+            </div>
+            <hr style="border: 0.3rem !important;">
+
+            <div class="container">
+              <div class="row">
+
+                <div class="grid text-center" style="--bs-columns: 2; 
+                            margin-top: 0.2rem;">
+                  <div class="row">
+                    <div class="col-lg-7 col-sm-6">
+                      <label for="cart-txt-totaldis">Discount</label>
+                    </div>
+                    <div class="col-lg-5 col-sm-6  ">
+                      <input readonly class="form-control-plaintext" value="0" type="text" id="cart-txt-totaldis"><br>
+                    </div>
+                    <div class="col-lg-7 col-sm-6 cart-container-padding">
+                      <label for="cart-txt-totalamount">Payeble amount</label>
+                    </div>
+                    <div class="col-lg-5 col-sm-6 mb-1 ">
+                      <input readonly class="form-control-plaintext  cart-container-padding" type="text"
+                        id="cart-txt-totalamount" value="0"><br>
+                    </div>
+                    <hr>
+                    <div class="col-lg-5 col-sm-6 mb-1 " style="margin-left: 1.5rem;">
+                      
+                      <button class="btn btn-success" id="place-btn">Place</button>
+                    </div>
+                    <div class="col-lg-5 col-sm-6 mb-1 ">
+                      <button class="btn btn-danger" id="clear-btn">Clear</button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  </div>
+
+
+  <script src="JS/store.js"></script>
+  <script src="JS/order.js"></script>
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 </body>
 
